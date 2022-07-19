@@ -19,7 +19,12 @@ class APISettings(BaseSettings):
 
 
 class MongoSettings:
-    pass
+    uri: str = "mongodb+srv://devmysql:Devmysql1234!@mydev.qmdf64n.mongodb.net/?retryWrites=true&w=majority"
+    database: str = "fastapi_pydantic+mongo-example"
+    collection: str = "people"
+
+    class Config(BaseSettings.Config):
+        env_prefix = "MONGO_"
 
 
 api_settings = APISettings()
