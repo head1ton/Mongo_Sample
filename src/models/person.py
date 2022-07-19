@@ -1,15 +1,12 @@
-from time import time
-from uuid import uuid4
-
 from pydantic import Field
 
+from src.utils import get_uuid, get_time
 
 __all__ = ("Person", )
 
 _string = dict(min_length=1)
 
-_unix_ts = dict(example=time())
-
+_unix_ts = dict(example=get_time())
 
 
 class Person:
@@ -34,7 +31,7 @@ class Person:
     )
     person_id = Field(
         description="Unique identifier of this person in the database",
-        example=str(uuid4()),
+        example=get_uuid(),
         min_length=36,
         max_length=36
     )
