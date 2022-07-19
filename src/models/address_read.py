@@ -1,5 +1,4 @@
-from pydantic import BaseModel
-
+from src.models.common import BaseModel
 from src.models.address import Address
 
 
