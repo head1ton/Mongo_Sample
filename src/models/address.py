@@ -4,7 +4,7 @@ from uuid import uuid4
 from pydantic import Field
 
 
-__all__ = ("Address")
+__all__ = ("Address", )
 
 _string = dict(min_length=1)
 
