@@ -8,8 +8,6 @@ app = FastAPI(title=settings.title, version="0.0.1")
 app.middleware("http")(request_handler)
 
 
-
-
 def run():
     uvicorn.run(
         app,
