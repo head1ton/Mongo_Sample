@@ -4,4 +4,4 @@ __all__ = ("BaseError")
 
 
 class BaseError(BaseModel):
-    message: str = Field(..., description="Error message or description")\
+    message: str = Field(..., description="Error message or description")
